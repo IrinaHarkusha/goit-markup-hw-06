@@ -41,6 +41,7 @@ h1,h2,h3 {
     overflow: hidden;
     border: 0;
     clip: (0 0 0 0);
+    outline: none;
 
 }
 
@@ -465,14 +466,16 @@ img {
     justify-content: center;
     align-items: center;
     gap: 16px;
+    cursor: pointer;
 
     margin-left: 24px;
     padding: 8px 24px;
-    background-color: var(--accent-color);
-    border-color: var(--accent-color);
     border-radius: 4px;
     min-width: 165px;
     height: 40px;
+
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
     color: var(--white-color);
     font-weight: 500;
     line-height: 1.5;
@@ -482,8 +485,8 @@ img {
 
 .subscribe-btn:hover,
 .subscribe-btn:focus {
-    background-color: var(--accent-color);
-    border-color: var(--accent-color);
+    background-color: var(--color-hover);
+    border-color: var(--color-hover);
 }
 .subscribe-title-list-wrapper {
     padding-left: 16px;
@@ -611,7 +614,7 @@ img {
     border-radius: 4px;
     border: 1px solid rgba(46, 47, 66, 0.4);
     padding-left: 38px;
-    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 
 }
@@ -624,7 +627,9 @@ img {
 .modal-form-field {
     margin-bottom: 8px;
 }
-
+.form-field {
+    margin-bottom: 16px;
+}
 .modal-form-wrapper {
     position: relative;
 
@@ -645,6 +650,7 @@ img {
 }
 
 .modal-form-message {
+    display:block;
     resize: none;
     width: 100%;
     height: 120px;
@@ -672,11 +678,13 @@ img {
     display: flex;
     align-items: center;
     margin-bottom: 24px;
-    color: var(--modal-form-text);
     font-weight: 400;
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
+    color: var(--modal-form-text);
+    background-color: var(--secondary-color-text);
+    
 
 }
 .modal-form-check-desc::before {
@@ -688,12 +696,13 @@ img {
     border-radius: 2px;
     cursor: pointer;
     margin-right: 8px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 
 }
 .modal-form-check:checked + .modal-form-check-desc::before {
     background-image: url(../images/vector.svg);
     background-color: var(--color-hover);
-    fill: var(--secondary-background-color);
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -723,6 +732,7 @@ img {
 
 .modal-form-btn:hover,
 .modal-form-btn:focus {
+    background-color: var(--color-hover);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
         
 
